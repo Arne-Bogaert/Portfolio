@@ -112,3 +112,67 @@
   background-color: var(--section-bg);
   color: var(--section-fg);
 }
+
+/* Zwevende animatie voor de achtergrond deeltjes */
+@keyframes float-slow {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.1;
+  }
+
+  25% {
+    transform: translate(20px, -30px) rotate(10deg);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: translate(0px, -60px) rotate(0deg);
+    opacity: 0.1;
+  }
+
+  75% {
+    transform: translate(-20px, -30px) rotate(-10deg);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.1;
+  }
+}
+
+.animate-float-slow {
+  /* De duur wordt in de component zelf overschreven voor variatie */
+  animation: float-slow 20s infinite ease-in-out;
+}
+
+@keyframes float-loop {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.15;
+  }
+
+  25% {
+    transform: translate(15px, -15px) rotate(5deg);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translate(0, -30px) rotate(0deg);
+    opacity: 0.15;
+  }
+
+  75% {
+    transform: translate(-15px, -15px) rotate(-5deg);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.15;
+  }
+}
+
+.animate-float-loop {
+  animation: float-loop 5s ease-in-out infinite;
+}
