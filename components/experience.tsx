@@ -15,7 +15,7 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="section-dark flex min-h-screen items-center px-6 py-24"
+      className="section-light flex min-h-screen items-center px-6 py-24"
     >
       <div className="mx-auto w-full max-w-4xl">
         <h2 className="mb-16 text-center text-3xl font-semibold">Experience</h2>

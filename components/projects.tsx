@@ -25,12 +25,10 @@ export function Projects() {
     <>
       <section
         id="projects"
-        className="section-light flex min-h-screen items-center px-6 py-24"
+        className="section-dark flex min-h-screen items-center px-6 py-24"
       >
         <div className="mx-auto w-full max-w-6xl">
-          <h2 className="mb-16 text-center text-3xl font-semibold text-foreground">
-            Projects
-          </h2>
+          <h2 className="mb-16 text-center text-3xl font-semibold">Projects</h2>
 
           {/* 3-column grid */}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
