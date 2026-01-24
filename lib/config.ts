@@ -107,8 +107,9 @@ export const siteConfig = {
       fullDescription:
         'This is a complete Backend for a Ticket & Event managing platform, it was made with Node.js and includes full API routing with authentication and follows best REST API practices. The project also includes a feature to convert tickets to real-time PDF files',
       technologies: ['Typescript', 'Node.js', 'MySQL'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://frontendweb-2526-bogaertarne.onrender.com',
+      liveUrl: 'https://frontendweb-2526-bogaertarne.onrender.com',
+      githubUrl:
+        'https://github.com/Arne-Bogaert/Event-Ticket-Manager-API-Backend',
       image: '/projects/Ticket.png',
     },
     {
@@ -119,6 +120,16 @@ export const siteConfig = {
       technologies: ['Python', 'NEAT', 'PyGame'],
       githubUrl: 'https://github.com/Arne-Bogaert/Flappy-Bird-AI',
       image: '/projects/FlappyBird.webp',
+    },
+    {
+      title: 'Band site',
+      summary: 'Linktree style site for my band',
+      fullDescription:
+        'This is a website i created for my band Quiwie, the site is still under construction with many more features planned. I also use this project to delve deeper in the workings of a new javascript framework im testing out called Astro. The website is hosted with Github Pages but will eventually move to Vercel',
+      technologies: ['Astro', 'Typescript'],
+      liveUrl: 'https://arne-bogaert.github.io/Quiwie-site/',
+      githubUrl: 'https://github.com/Arne-Bogaert/Quiwie-site',
+      image: '/projects/bandsite.jpg',
     },
   ],
 };
