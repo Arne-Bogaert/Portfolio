@@ -73,6 +73,7 @@ export const siteConfig = {
         'Bash',
         'Next.js',
       ],
+      logo: '/logos/logo-1.jpg',
     },
     {
       company: 'Codefever',
@@ -83,6 +84,7 @@ export const siteConfig = {
       description:
         'Assistant teacher for Codefever, Codefever is a platform that organises coding lessons for kids to learn in an interactive manner. I help teaching Scratch, HTML/CSS, Javascript and Python',
       technologies: ['Javascript', 'Python', 'HTML', 'CSS', 'Scratch'],
+      logo: '/logos/codeFever logo.png',
     },
   ],
 
@@ -96,7 +98,7 @@ export const siteConfig = {
         'An online boardgame called Kingdomino made in Java for a school project, It is entirely written in Java and JavaFx for the visuals. Also includes extensive Javadoc',
       technologies: ['Java', 'JavaFX'],
       githubUrl: 'https://github.com/Arne-Bogaert/KingDomino',
-      image: '',
+      image: '/projects/kingdomino.webp',
     },
     {
       title: 'Ticket & Event manager Backend Application',
@@ -107,7 +109,7 @@ export const siteConfig = {
       technologies: ['Typescript', 'Node.js', 'MySQL'],
       liveUrl: 'https://example.com',
       githubUrl: 'https://frontendweb-2526-bogaertarne.onrender.com',
-      image: '',
+      image: '/projects/Ticket.png',
     },
     {
       title: 'AI Learns Flappy Bird',
@@ -116,7 +118,7 @@ export const siteConfig = {
         'Using the NEAT framework i developed a machine learning model that trains itself to learn the popular game Flappy Bird',
       technologies: ['Python', 'NEAT', 'PyGame'],
       githubUrl: 'https://github.com/Arne-Bogaert/Flappy-Bird-AI',
-      image: '',
+      image: '/projects/FlappyBird.webp',
     },
   ],
 };

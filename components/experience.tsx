@@ -1,15 +1,16 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import { siteConfig } from "@/lib/config"
+import { useState } from 'react';
+import Image from 'next/image';
+import { siteConfig } from '@/lib/config';
 
 export function Experience() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   // Sort experiences by startYear descending (most recent first)
   const sortedExperiences = [...siteConfig.experiences].sort(
-    (a, b) => b.startYear - a.startYear
-  )
+    (a, b) => b.startYear - a.startYear,
+  );
 
   return (
     <section
@@ -27,8 +28,8 @@ export function Experience() {
           {/* Experience entries */}
           <div className="space-y-12">
             {sortedExperiences.map((exp, index) => {
-              const isLeft = index % 2 === 0
-              const isHovered = hoveredIndex === index
+              const isLeft = index % 2 === 0;
+              const isHovered = hoveredIndex === index;
 
               return (
                 <div
@@ -37,31 +38,47 @@ export function Experience() {
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  {/* Timeline dot */}
-                  <div className="absolute left-1/2 top-6 z-10 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-[var(--section-fg)] bg-[var(--section-bg)]" />
+                  {/* Timeline dot or logo */}
+                  <div className="absolute left-1/2 top-4 z-10 -translate-x-1/2">
+                    {exp.logo ? (
+                      <div className="h-10 w-10 overflow-hidden rounded-full border-2 border-[var(--section-border)] bg-[var(--section-card)]">
+                        <Image
+                          src={exp.logo || '/placeholder.svg'}
+                          alt={`${exp.company} logo`}
+                          width={40}
+                          height={40}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="h-3 w-3 rounded-full border-2 border-[var(--section-fg)] bg-[var(--section-bg)]" />
+                    )}
+                  </div>
 
                   {/* Content card */}
                   <div
                     className={`relative w-[calc(50%-2rem)] cursor-pointer transition-all duration-300 ${
-                      isLeft ? "mr-auto pr-8 text-right" : "ml-auto pl-8 text-left"
+                      isLeft
+                        ? 'mr-auto pr-8 text-right'
+                        : 'ml-auto pl-8 text-left'
                     }`}
                   >
                     {/* Connector line to center */}
                     <div
                       className={`absolute top-7 h-px w-8 bg-[var(--section-border)] ${
-                        isLeft ? "right-0" : "left-0"
+                        isLeft ? 'right-0' : 'left-0'
                       }`}
                     />
 
                     {/* Card */}
                     <div
                       className={`rounded-lg border border-[var(--section-border)] bg-[var(--section-card)] p-5 transition-all duration-300 ${
-                        isHovered ? "shadow-lg" : ""
+                        isHovered ? 'shadow-lg' : ''
                       }`}
                     >
                       {/* Date */}
                       <div className="mb-2 text-sm text-[var(--section-muted)]">
-                        {exp.startYear} - {exp.endYear || "Present"}
+                        {exp.startYear} - {exp.endYear || 'Present'}
                       </div>
 
                       {/* Role */}
@@ -80,7 +97,9 @@ export function Experience() {
                       {/* Expandable content */}
                       <div
                         className={`overflow-hidden transition-all duration-300 ${
-                          isHovered ? "mt-4 max-h-96 opacity-100" : "max-h-0 opacity-0"
+                          isHovered
+                            ? 'mt-4 max-h-96 opacity-100'
+                            : 'max-h-0 opacity-0'
                         }`}
                       >
                         <p className="mb-4 text-sm leading-relaxed text-[var(--section-muted)]">
@@ -90,7 +109,7 @@ export function Experience() {
                         {/* Tech stack */}
                         <div
                           className={`flex flex-wrap gap-2 ${
-                            isLeft ? "justify-end" : "justify-start"
+                            isLeft ? 'justify-end' : 'justify-start'
                           }`}
                         >
                           {exp.technologies.map((tech) => (
@@ -106,11 +125,11 @@ export function Experience() {
                     </div>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

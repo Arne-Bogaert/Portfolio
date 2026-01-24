@@ -1,5 +1,5 @@
 import { siteConfig } from '@/lib/config';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -7,7 +7,13 @@ export function Footer() {
   return (
     <footer className="border-t border-border px-6 py-12">
       <div className="mx-auto max-w-4xl">
-        <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
+        <div className="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row">
+          {/* Linkerkant - Tekst */}
+          <p className="text-sm text-muted-foreground">
+            @ {currentYear} {siteConfig.name}. All rights reserved.
+          </p>
+
+          {/* Rechterkant - Social icons (alleen Github & LinkedIn) */}
           <div className="flex items-center gap-6">
             <a
               href={siteConfig.socials.github}
@@ -28,10 +34,6 @@ export function Footer() {
               <Linkedin className="h-5 w-5" />
             </a>
           </div>
-
-          <p className="text-sm text-muted-foreground">
-            @ {currentYear} {siteConfig.name}. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>

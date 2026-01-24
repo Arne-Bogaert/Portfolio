@@ -1,25 +1,25 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import { siteConfig } from "@/lib/config"
-import { ArrowUpRight, Github, FolderOpen, X } from "lucide-react"
-import Image from "next/image"
+import { useState } from 'react';
+import { siteConfig } from '@/lib/config';
+import { ArrowUpRight, Github, FolderOpen, X } from 'lucide-react';
+import Image from 'next/image';
 
 interface Project {
-  title: string
-  summary: string
-  fullDescription: string
-  technologies: string[]
-  liveUrl?: string
-  githubUrl?: string
-  image?: string
+  title: string;
+  summary: string;
+  fullDescription: string;
+  technologies: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+  image?: string;
 }
 
 export function Projects() {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   // Take first 3 projects for featured display
-  const featuredProjects = siteConfig.projects.slice(0, 3) as Project[]
+  const featuredProjects = siteConfig.projects.slice(0, 3) as Project[];
 
   return (
     <>
@@ -44,10 +44,11 @@ export function Projects() {
                 <div className="relative aspect-[4/3] overflow-hidden bg-secondary">
                   {project.image ? (
                     <Image
-                      src={project.image || "/placeholder.svg"}
+                      src={project.image || '/placeholder.svg'}
                       alt={project.title}
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   ) : (
                     <div className="flex h-full items-center justify-center">
@@ -124,10 +125,11 @@ export function Projects() {
             {selectedProject.image && (
               <div className="relative mb-6 aspect-video overflow-hidden rounded-lg bg-secondary">
                 <Image
-                  src={selectedProject.image || "/placeholder.svg"}
+                  src={selectedProject.image || '/placeholder.svg'}
                   alt={selectedProject.title}
                   fill
                   className="object-cover"
+                  sizes="100vw"
                 />
               </div>
             )}
@@ -188,5 +190,5 @@ export function Projects() {
         </div>
       )}
     </>
-  )
+  );
 }
