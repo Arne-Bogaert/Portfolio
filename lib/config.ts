@@ -4,72 +4,85 @@
 // ============================================
 
 export const siteConfig = {
-  // Personal Information
-  name: "Your Name",
-  role: "AI & Data Engineer",
-  roleSecondary: "Fullstack Web Developer",
-  email: "hello@yourname.com",
-  location: "Belgium",
-  
+  // Personal information
+  name: 'Arne Bogaert',
+  role: 'AI & Data Engineer',
+  roleSecondary: 'Fullstack Web Developer',
+  email: 'arnebogaert81@gmail.com',
+  location: 'Belgium',
+
   // About Section
   about: {
-    intro: "I'm a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering.",
-    description: "My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.",
-    currentRole: "Currently, I'm a Full Stack Developer building modern web applications with a focus on user experience and clean code architecture.",
-    interests: "In my spare time, I enjoy contributing to open source, exploring new technologies, reading about software architecture, and occasionally playing chess.",
+    intro:
+      "I'm a developer passionate about pixel-perfect Web Development and Ai & Data Engineering.",
+    description:
+      'My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.',
+    currentRole:
+      "Currently, I'm a student at HoGent where i am learning everything i need to know for honing my skills",
+    interests:
+      'In my spare time, I enjoy making music, reading books, exploring new technologies and playing chess ',
   },
 
   // Social Links
   socials: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    twitter: "https://twitter.com/yourusername",
+    github: 'https://github.com/Arne-Bogaert',
+    linkedin: 'https://www.linkedin.com/in/arne-bogaert/',
   },
 
   // Navigation Links
   navLinks: [
-    { label: "About", href: "#about" },
-    { label: "Experience", href: "#experience" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
+    { label: 'About', href: '#about' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contact', href: '#contact' },
   ],
 
   // Skills/Tech Stack
   skills: [
-    { name: "JavaScript", category: "Languages" },
-    { name: "TypeScript", category: "Languages" },
-    { name: "Python", category: "Languages" },
-    { name: "React", category: "Frontend" },
-    { name: "Next.js", category: "Frontend" },
-    { name: "Tailwind CSS", category: "Frontend" },
-    { name: "Node.js", category: "Backend" },
-    { name: "PostgreSQL", category: "Database" },
-    { name: "MongoDB", category: "Database" },
-    { name: "AWS", category: "Cloud" },
-    { name: "Docker", category: "DevOps" },
-    { name: "Git", category: "Tools" },
+    { name: 'JavaScript', category: 'Languages' },
+    { name: 'TypeScript', category: 'Languages' },
+    { name: 'Python', category: 'Languages' },
+    { name: 'Java', category: 'Languages' },
+    { name: 'React', category: 'Frontend' },
+    { name: 'Next.js', category: 'Frontend' },
+    { name: 'Tailwind CSS', category: 'Frontend' },
+    { name: 'Node.js', category: 'Backend' },
+    { name: 'PostgreSQL', category: 'Database' },
+    { name: 'Docker', category: 'DevOps' },
+    { name: 'Git', category: 'Tools' },
+    { name: 'Scratch', category: 'Tools' },
   ],
 
   // Experience - Timeline automatically sorts by startYear (descending)
   // Add new experiences and they will appear in the correct chronological order
   experiences: [
     {
-      company: "Acme Corporation",
-      companyUrl: "https://example.com",
-      role: "Senior Full Stack Developer",
+      company: 'Hogent',
+      companyUrl: 'https://hogent.be',
+      role: 'Student',
       startYear: 2023,
       endYear: null, // null means "Present"
-      description: "Leading the development of microservices architecture and mentoring junior developers. Implemented CI/CD pipelines that reduced deployment time by 60%.",
-      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS"],
+      description: 'Currently studying applied computer science at Hogent',
+      technologies: [
+        'React',
+        'TypeScript',
+        'Node.js',
+        'MySQL',
+        'Java',
+        'Javascript',
+        'Bash',
+        'Next.js',
+      ],
     },
     {
-      company: "TechStart Inc",
-      companyUrl: "https://example.com",
-      role: "Full Stack Developer",
-      startYear: 2021,
-      endYear: 2023,
-      description: "Built and maintained full-stack web applications serving 50,000+ users. Led migration from legacy systems to modern React stack.",
-      technologies: ["Next.js", "Python", "MongoDB", "Docker"],
+      company: 'Codefever',
+      companyUrl: 'https://codefever.be/nl',
+      role: 'Assistent Teacher',
+      startYear: 2026,
+      endYear: null, // null means "Present"
+      description:
+        'Assistant teacher for Codefever, Codefever is a platform that organises coding lessons for kids to learn in an interactive manner. I help teaching Scratch, HTML/CSS, Javascript and Python',
+      technologies: ['Javascript', 'Python', 'HTML', 'CSS', 'Scratch'],
     },
   ],
 
@@ -77,33 +90,35 @@ export const siteConfig = {
   // Simply add/remove projects from this array - the first 3 are shown as main cards
   projects: [
     {
-      title: "E-Commerce Platform",
-      summary: "A full-stack e-commerce solution with real-time inventory management.",
-      fullDescription: "A full-stack e-commerce solution with real-time inventory management, payment processing, and analytics dashboard. Built with modern technologies for optimal performance and scalability. Features include user authentication, product catalog, shopping cart, order management, and admin dashboard.",
-      technologies: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/project",
-      image: "/projects/project-1.jpg",
+      title: 'KingDomino',
+      summary: 'A full Java implementation of the Kingdomino boardgame',
+      fullDescription:
+        'An online boardgame called Kingdomino made in Java for a school project, It is entirely written in Java and JavaFx for the visuals. Also includes extensive Javadoc',
+      technologies: ['Java', 'JavaFX'],
+      githubUrl: 'https://github.com/Arne-Bogaert/KingDomino',
+      image: '',
     },
     {
-      title: "Task Management App",
-      summary: "A collaborative task management application with real-time updates.",
-      fullDescription: "A collaborative task management application with real-time updates, team workspaces, and productivity insights. Features include drag-and-drop task organization, team collaboration tools, deadline tracking, notifications, and detailed analytics to help teams stay productive.",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/project",
-      image: "/projects/project-2.jpg",
+      title: 'Ticket & Event manager Backend Application',
+      summary:
+        'Fully integrated backend for a Ticket & Event managing platform',
+      fullDescription:
+        'This is a complete Backend for a Ticket & Event managing platform, it was made with Node.js and includes full API routing with authentication and follows best REST API practices. The project also includes a feature to convert tickets to real-time PDF files',
+      technologies: ['Typescript', 'Node.js', 'MySQL'],
+      liveUrl: 'https://example.com',
+      githubUrl: 'https://frontendweb-2526-bogaertarne.onrender.com',
+      image: '',
     },
     {
-      title: "AI Content Generator",
-      summary: "An AI-powered tool that helps marketers create content.",
-      fullDescription: "An AI-powered content generation tool that helps marketers create blog posts, social media content, and ad copy. Leverages OpenAI's GPT models to generate high-quality, engaging content tailored to your brand voice and target audience.",
-      technologies: ["Python", "OpenAI", "FastAPI", "React"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/yourusername/project",
-      image: "/projects/project-3.jpg",
+      title: 'AI Learns Flappy Bird',
+      summary: 'Flappy Bird learns to play using NEAT Ai',
+      fullDescription:
+        'Using the NEAT framework i developed a machine learning model that trains itself to learn the popular game Flappy Bird',
+      technologies: ['Python', 'NEAT', 'PyGame'],
+      githubUrl: 'https://github.com/Arne-Bogaert/Flappy-Bird-AI',
+      image: '',
     },
   ],
-}
+};
 
-export type SiteConfig = typeof siteConfig
+export type SiteConfig = typeof siteConfig;

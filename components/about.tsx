@@ -1,12 +1,13 @@
-import { siteConfig } from "@/lib/config"
+import { siteConfig } from '@/lib/config';
 
 export function About() {
   return (
-    <section id="about" className="section-dark flex min-h-screen items-center px-6 py-24">
+    <section
+      id="about"
+      className="section-dark flex min-h-screen items-center px-6 py-24"
+    >
       <div className="mx-auto w-full max-w-5xl">
-        <h2 className="mb-16 text-center text-3xl font-semibold">
-          About Me
-        </h2>
+        <h2 className="mb-16 text-center text-3xl font-semibold">About Me</h2>
 
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left side - Image placeholder */}
@@ -48,8 +49,10 @@ export function About() {
               </h3>
               <div className="border-l-2 border-[var(--section-border)] pl-4">
                 <p className="font-medium">Computer Science</p>
-                <p className="text-sm text-[var(--section-muted)]">Your University</p>
-                <p className="text-sm text-[var(--section-muted)]">2018 - 2022</p>
+                <p className="text-sm text-[var(--section-muted)]">HoGent</p>
+                <p className="text-sm text-[var(--section-muted)]">
+                  2023 - Present
+                </p>
               </div>
             </div>
 
@@ -66,5 +69,5 @@ export function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }
