@@ -8,7 +8,7 @@ const _inter = Inter({ subsets: ['latin'] });
 const _jetbrainsMono = JetBrains_Mono({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Arne Bogaert',
+  title: 'Arne Bogaert || Portfolio',
   description: 'AI & Data Engineer and Fullstack Web Developer',
   generator: 'v0.app',
   icons: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
+        url: 'favicon/favicon.ico',
         type: 'image/svg+xml',
       },
     ],
@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
