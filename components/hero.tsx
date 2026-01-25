@@ -1,83 +1,190 @@
 import { siteConfig } from '@/lib/config';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
-// Configuratie voor de zwevende symbolen
+// Een grotere lijst met meer symbolen en variatie
 const codeParticles = [
+  // Links boven
   {
     symbol: '{',
-    top: '15%',
-    left: '10%',
+    top: '10%',
+    left: '5%',
     delay: '0s',
     duration: '25s',
     size: 'text-4xl',
   },
   {
+    symbol: 'const',
+    top: '20%',
+    left: '15%',
+    delay: '2s',
+    duration: '30s',
+    size: 'text-lg',
+  },
+  {
+    symbol: '&&',
+    top: '15%',
+    left: '25%',
+    delay: '12s',
+    duration: '28s',
+    size: 'text-3xl',
+  },
+
+  // Rechts boven
+  {
     symbol: '}',
-    top: '25%',
+    top: '15%',
     left: '85%',
     delay: '5s',
     duration: '20s',
     size: 'text-5xl',
   },
   {
-    symbol: '/>',
-    top: '60%',
-    left: '15%',
-    delay: '2s',
-    duration: '30s',
-    size: 'text-3xl',
-  },
-  {
     symbol: '=>',
-    top: '70%',
-    left: '80%',
+    top: '25%',
+    left: '75%',
     delay: '8s',
     duration: '22s',
     size: 'text-4xl',
   },
   {
-    symbol: '&&',
+    symbol: 'try',
     top: '10%',
     left: '60%',
-    delay: '12s',
-    duration: '28s',
+    delay: '15s',
+    duration: '35s',
+    size: 'text-xl',
+  },
+
+  // Midden gebieden
+  {
+    symbol: '</>',
+    top: '40%',
+    left: '10%',
+    delay: '7s',
+    duration: '32s',
+    size: 'text-2xl',
+  },
+  {
+    symbol: '!=',
+    top: '50%',
+    left: '90%',
+    delay: '1s',
+    duration: '29s',
     size: 'text-3xl',
   },
   {
-    symbol: ';',
-    top: '85%',
-    left: '40%',
-    delay: '15s',
-    duration: '24s',
-    size: 'text-5xl',
-  },
-  {
     symbol: '[]',
-    top: '40%',
+    top: '45%',
     left: '5%',
     delay: '3s',
     duration: '26s',
     size: 'text-4xl',
   },
   {
-    symbol: '</>',
+    symbol: 'async',
+    top: '35%',
+    left: '80%',
+    delay: '18s',
+    duration: '31s',
+    size: 'text-lg',
+  },
+
+  // Links onder
+  {
+    symbol: '/>',
+    top: '70%',
+    left: '15%',
+    delay: '4s',
+    duration: '30s',
+    size: 'text-3xl',
+  },
+  {
+    symbol: 'await',
+    top: '80%',
+    left: '8%',
+    delay: '20s',
+    duration: '24s',
+    size: 'text-lg',
+  },
+  {
+    symbol: 'function',
+    top: '65%',
+    left: '25%',
+    delay: '10s',
+    duration: '33s',
+    size: 'text-sm',
+  },
+
+  // Rechts onder
+  {
+    symbol: ';',
+    top: '85%',
+    left: '80%',
+    delay: '15s',
+    duration: '24s',
+    size: 'text-5xl',
+  },
+  {
+    symbol: 'return',
+    top: '75%',
+    left: '70%',
+    delay: '6s',
+    duration: '27s',
+    size: 'text-lg',
+  },
+  {
+    symbol: '*',
+    top: '90%',
+    left: '60%',
+    delay: '9s',
+    duration: '23s',
+    size: 'text-3xl',
+  },
+
+  // Extra opvulling
+  {
+    symbol: '||',
+    top: '60%',
+    left: '95%',
+    delay: '11s',
+    duration: '29s',
+    size: 'text-3xl',
+  },
+  {
+    symbol: 'import',
+    top: '5%',
+    left: '45%',
+    delay: '22s',
+    duration: '36s',
+    size: 'text-sm',
+  },
+  {
+    symbol: 'export',
+    top: '95%',
+    left: '35%',
+    delay: '14s',
+    duration: '34s',
+    size: 'text-sm',
+  },
+  {
+    symbol: ':',
     top: '30%',
-    left: '50%',
-    delay: '7s',
-    duration: '35s',
-    size: 'text-2xl',
+    left: '95%',
+    delay: '16s',
+    duration: '25s',
+    size: 'text-4xl',
   },
 ];
 
 export function Hero() {
   return (
     <section className="section-light relative flex min-h-screen items-center justify-center overflow-hidden px-6">
-      {/*  De zwevende symbolen  */}
-      <div className="pointer-events-none absolute inset-0 z-0 select-none">
+      {/* --- ACHTERGROND: Vliegende deeltjes --- */}
+      <div className="pointer-events-none absolute inset-0 z-0 select-none overflow-hidden">
         {codeParticles.map((item, index) => (
           <div
             key={index}
-            className={`animate-float-slow absolute font-mono font-bold text-muted-foreground/20 ${item.size}`}
+            className={`animate-fly absolute font-mono font-bold text-muted-foreground/60 ${item.size}`}
             style={{
               top: item.top,
               left: item.left,

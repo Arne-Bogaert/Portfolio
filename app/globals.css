@@ -113,7 +113,6 @@
   color: var(--section-fg);
 }
 
-/* Zwevende animatie voor de achtergrond deeltjes */
 @keyframes float-slow {
   0% {
     transform: translate(0, 0) rotate(0deg);
@@ -142,7 +141,6 @@
 }
 
 .animate-float-slow {
-  /* De duur wordt in de component zelf overschreven voor variatie */
   animation: float-slow 20s infinite ease-in-out;
 }
 
@@ -175,4 +173,33 @@
 
 .animate-float-loop {
   animation: float-loop 5s ease-in-out infinite;
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translate(100px, -100px) rotate(180deg);
+    opacity: 0.5;
+  }
+
+  80% {
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translate(-50px, 50px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-fly {
+  animation: fly linear infinite;
 }
