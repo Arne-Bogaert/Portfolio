@@ -28,7 +28,7 @@ A modern, responsive, and minimalist portfolio built with Next.js, designed to s
 * **Contact Form:** Fully functional form powered by **Resend**.
 * **SEO Optimized:** Custom metadata, Open Graph tags, and dynamic favicons for better social sharing and search visibility.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 * **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
 * **Language:** [TypeScript](https://www.typescriptlang.org/)
