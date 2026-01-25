@@ -8,9 +8,8 @@ const _inter = Inter({ subsets: ['latin'] });
 const _jetbrainsMono = JetBrains_Mono({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Your Name | Full Stack Developer',
-  description:
-    'Full Stack Developer crafting modern web experiences with clean code and thoughtful design.',
+  title: 'Arne Bogaert',
+  description: 'AI & Data Engineer and Fullstack Web Developer',
   generator: 'v0.app',
   icons: {
     icon: [
