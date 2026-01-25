@@ -1,61 +1,106 @@
-"use client"
+'use client';
 
-import { useState, useEffect } from "react"
-import { siteConfig } from "@/lib/config"
-import { cn } from "@/lib/utils"
+import * as React from 'react';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
+import { siteConfig } from '@/lib/config';
+import { Menu, X } from 'lucide-react';
 
 export function Navigation() {
-  const [activeSection, setActiveSection] = useState("")
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [activeSection, setActiveSection] = React.useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
-  useEffect(() => {
+  // Deze functie houdt bij waar je scrollt
+  React.useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      const sections = siteConfig.navLinks.map((link) =>
+        link.href.replace('#', ''),
+      );
 
-      // Find active section
-      const sections = siteConfig.navLinks.map((link) => link.href.slice(1))
-      for (const section of sections.reverse()) {
-        const element = document.getElementById(section)
+      // Zoek welke sectie nu in beeld is
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
         if (element) {
-          const rect = element.getBoundingClientRect()
-          if (rect.top <= 150) {
-            setActiveSection(section)
-            break
+          const rect = element.getBoundingClientRect();
+          // Als de sectie in het bovenste deel van het scherm is (met wat marge)
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            setActiveSection(sectionId);
+            break;
           }
         }
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav
-      className={cn(
-        "fixed left-0 top-0 z-50 w-full transition-all duration-300",
-        isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
-      )}
-    >
-      <div className="mx-auto flex max-w-5xl items-center justify-center px-6 py-5">
-        <ul className="flex items-center gap-8">
-          {siteConfig.navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className={cn(
-                  "text-sm transition-colors",
-                  activeSection === link.href.slice(1)
-                    ? "text-foreground font-medium"
-                    : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+    <header className="fixed top-0 z-50 w-full px-6 py-4">
+      <div className="mx-auto max-w-5xl">
+        <nav className="relative flex items-center justify-between md:justify-center rounded-full border border-border/40 bg-background/80 px-6 py-3 shadow-sm backdrop-blur-md transition-all">
+          <Link
+            href="/"
+            className="text-lg font-bold tracking-tight text-foreground"
+            onClick={() => window.scrollTo(0, 0)}
+          ></Link>
+
+          {/* Desktop Navigatie */}
+          <ul className="hidden items-center gap-8 md:flex">
+            {siteConfig.navLinks.map((link) => {
+              const isActive = activeSection === link.href.replace('#', '');
+
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      'text-sm font-medium transition-colors hover:text-primary',
+                      isActive
+                        ? 'text-primary font-semibold' // Actieve stijl
+                        : 'text-muted-foreground', // Inactieve stijl
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+
+          {/* Mobiele Hamburger Menu Knop */}
+          <button
+            className="md:hidden text-foreground"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </nav>
+
+        {/* Mobiel Menu Uitklap */}
+        {isMobileMenuOpen && (
+          <div className="mt-2 rounded-2xl border border-border/40 bg-background/95 p-6 shadow-xl backdrop-blur-md md:hidden">
+            <ul className="flex flex-col gap-4">
+              {siteConfig.navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="block text-lg font-medium text-foreground hover:text-primary"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
-    </nav>
-  )
+    </header>
+  );
 }

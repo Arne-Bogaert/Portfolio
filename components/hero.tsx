@@ -154,7 +154,7 @@ const codeParticles = [
     symbol: 'import',
     top: '5%',
     left: '45%',
-    delay: '22s',
+    delay: '0s',
     duration: '36s',
     size: 'text-sm',
   },
