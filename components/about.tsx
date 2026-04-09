@@ -1,5 +1,6 @@
 import { siteConfig } from '@/lib/config';
-import { Code2, Music, BookOpen, Cpu } from 'lucide-react';
+import { Music, BookOpen, Code2, Cpu } from 'lucide-react';
+import Image from 'next/image';
 
 const interests = [
   { icon: Music, label: 'Making Music' },
@@ -26,23 +27,21 @@ export function About() {
         </div>
 
         <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
-          {/* Left side - Visual Element */}
+          {/* Left side - Profile Photo */}
           <div className="flex items-center justify-center lg:col-span-2">
             <div className="relative">
               {/* Decorative rings */}
-              <div className="absolute -inset-4 rounded-full border-2 border-dashed border-[var(--section-border)] opacity-50" />
-              <div className="absolute -inset-8 rounded-full border border-[var(--section-border)] opacity-30" />
+              <div className="absolute -inset-4 rounded-3xl border-2 border-dashed border-[var(--section-border)] opacity-50" />
+              <div className="absolute -inset-8 rounded-3xl border border-[var(--section-border)] opacity-30" />
               
-              {/* Main card */}
-              <div className="relative aspect-square w-64 overflow-hidden rounded-3xl border-2 border-[var(--section-border)] bg-gradient-to-br from-[var(--section-card)] to-[var(--section-bg)] p-8 shadow-2xl md:w-80">
-                <div className="flex h-full flex-col items-center justify-center text-center">
-                  <div className="mb-4 rounded-full bg-primary/20 p-4">
-                    <Code2 className="h-12 w-12 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold text-[var(--section-fg)]">{siteConfig.name}</h3>
-                  <p className="mt-2 text-sm text-[var(--section-muted)]">{siteConfig.role}</p>
-                  <p className="text-sm text-[var(--section-muted)]">{siteConfig.roleSecondary}</p>
-                </div>
+              {/* Profile Photo */}
+              <div className="relative aspect-[3/4] w-64 overflow-hidden rounded-3xl border-2 border-[var(--section-border)] shadow-2xl md:w-80">
+                <Image
+                  src="/arne-profile.jpg"
+                  alt="Arne Bogaert"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>

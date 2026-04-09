@@ -1,5 +1,5 @@
 import { siteConfig } from '@/lib/config';
-import { Github, Linkedin, Heart } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -40,12 +40,9 @@ export function Footer() {
           <div className="h-px w-full max-w-xs bg-border" />
 
           {/* Copyright */}
-          <div className="flex flex-col items-center gap-2 text-center text-sm text-muted-foreground">
-            <p className="flex items-center gap-1">
-              Built with <Heart className="h-4 w-4 text-primary" /> using Next.js & Tailwind CSS
-            </p>
-            <p>&copy; {currentYear} {siteConfig.name}. All rights reserved.</p>
-          </div>
+          <p className="text-center text-sm text-muted-foreground">
+            &copy; {currentYear} {siteConfig.name}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

@@ -95,11 +95,11 @@ export const siteConfig = {
       title: 'RS Projects Website',
       summary: 'Custom designed photography portfolio website',
       fullDescription:
-        'A beautiful, custom-designed website for RS Projects showcasing photography work. Built with modern web technologies and featuring an elegant, minimalist design that puts the visual content front and center. The site includes smooth animations and a responsive layout.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      liveUrl: 'https://rs-projects-website.vercel.app',
+        'A beautiful, custom-designed website for RS Projects showcasing photography work. Built with React and modern web technologies, featuring an elegant, minimalist design that puts the visual content front and center. The site includes smooth animations and a responsive layout.',
+      technologies: ['React', 'CSS', 'JavaScript'],
+      liveUrl: 'https://rs-projects-website-five.vercel.app/',
       githubUrl: 'https://github.com/Arne-Bogaert/RS_Projects_Website',
-      image: '/projects/rs-projects.jpg',
+      image: '/projects/rs-projects.png',
     },
     {
       title: 'Quiwie Band Website',
@@ -107,9 +107,9 @@ export const siteConfig = {
       fullDescription:
         'A stylish website created for my band Quiwie. Built with Astro framework featuring a modern, dark aesthetic that matches the band\'s musical style. The site includes social media links, music streaming integration, and band information. Hosted on Vercel for optimal performance.',
       technologies: ['Astro', 'CSS', 'JavaScript'],
-      liveUrl: 'https://quiwie-site.vercel.app',
+      liveUrl: 'https://quiwieband.vercel.app',
       githubUrl: 'https://github.com/Arne-Bogaert/Quiwie-Site',
-      image: '/projects/quiwie-site.jpg',
+      image: '/projects/quiwie-site.png',
     },
     {
       title: 'KingDomino',

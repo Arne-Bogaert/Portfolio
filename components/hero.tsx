@@ -40,16 +40,7 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center text-center">
-        {/* Status Badge */}
-        <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
-          </span>
-          <span className="text-sm font-medium text-foreground">Available for opportunities</span>
-        </div>
-
-        {/* Name with gradient accent */}
+        {/* Name */}
         <h1 className="mb-6 text-balance text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
           {siteConfig.name}
         </h1>
