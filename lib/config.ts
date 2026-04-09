@@ -92,6 +92,26 @@ export const siteConfig = {
   // Simply add/remove projects from this array - the first 3 are shown as main cards
   projects: [
     {
+      title: 'RS Projects Website',
+      summary: 'Custom designed photography portfolio website',
+      fullDescription:
+        'A beautiful, custom-designed website for RS Projects showcasing photography work. Built with React and modern web technologies, featuring an elegant, minimalist design that puts the visual content front and center. The site includes smooth animations and a responsive layout.',
+      technologies: ['React', 'CSS', 'JavaScript'],
+      liveUrl: 'https://rs-projects-website-five.vercel.app/',
+      githubUrl: 'https://github.com/Arne-Bogaert/RS_Projects_Website',
+      image: '/projects/rs-projects.png',
+    },
+    {
+      title: 'Quiwie Band Website',
+      summary: 'Modern website for indie band Quiwie',
+      fullDescription:
+        'A stylish website created for my band Quiwie. Built with Astro framework featuring a modern, dark aesthetic that matches the band\'s musical style. The site includes social media links, music streaming integration, and band information. Hosted on Vercel for optimal performance.',
+      technologies: ['Astro', 'CSS', 'JavaScript'],
+      liveUrl: 'https://quiwieband.vercel.app',
+      githubUrl: 'https://github.com/Arne-Bogaert/Quiwie-Site',
+      image: '/projects/quiwie-site.png',
+    },
+    {
       title: 'KingDomino',
       summary: 'A full Java implementation of the Kingdomino boardgame',
       fullDescription:
@@ -101,12 +121,12 @@ export const siteConfig = {
       image: '/projects/kingdomino.webp',
     },
     {
-      title: 'Ticket & Event manager Backend Application',
+      title: 'Ticket & Event Manager',
       summary:
         'Fully integrated backend for a Ticket & Event managing platform',
       fullDescription:
         'This is a complete Backend for a Ticket & Event managing platform, it was made with Node.js and includes full API routing with authentication and follows best REST API practices. The project also includes a feature to convert tickets to real-time PDF files',
-      technologies: ['Typescript', 'Node.js', 'MySQL'],
+      technologies: ['TypeScript', 'Node.js', 'MySQL'],
       liveUrl: 'https://frontendweb-2526-bogaertarne.onrender.com',
       githubUrl:
         'https://github.com/Arne-Bogaert/Event-Ticket-Manager-API-Backend',
@@ -114,22 +134,12 @@ export const siteConfig = {
     },
     {
       title: 'AI Learns Flappy Bird',
-      summary: 'Flappy Bird learns to play using NEAT Ai',
+      summary: 'Flappy Bird learns to play using NEAT AI',
       fullDescription:
         'Using the NEAT framework i developed a machine learning model that trains itself to learn the popular game Flappy Bird',
       technologies: ['Python', 'NEAT', 'PyGame'],
       githubUrl: 'https://github.com/Arne-Bogaert/Flappy-Bird-AI',
       image: '/projects/FlappyBird.webp',
-    },
-    {
-      title: 'Band site',
-      summary: 'Linktree style site for my band',
-      fullDescription:
-        'This is a website i created for my band Quiwie, the site is still under construction with many more features planned. I also use this project to delve deeper in the workings of a new javascript framework im testing out called Astro. The website is hosted with Github Pages but will eventually move to Vercel',
-      technologies: ['Astro', 'Typescript'],
-      liveUrl: 'https://arne-bogaert.github.io/Quiwie-site/',
-      githubUrl: 'https://github.com/Arne-Bogaert/Quiwie-site',
-      image: '/projects/bandsite.jpg',
     },
   ],
 };
